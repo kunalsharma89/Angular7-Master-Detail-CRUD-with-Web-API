@@ -39,11 +39,6 @@ namespace WebApi.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutItemMaster(int id, ItemMaster itemMaster)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             if (id != itemMaster.ItemId)
             {
                 return BadRequest();
@@ -74,11 +69,6 @@ namespace WebApi.Controllers
         [ResponseType(typeof(ItemMaster))]
         public IHttpActionResult PostItemMaster(ItemMaster itemMaster)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             db.ItemMasters.Add(itemMaster);
             db.SaveChanges();
 

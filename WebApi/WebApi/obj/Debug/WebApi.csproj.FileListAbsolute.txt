@@ -84,3 +84,6 @@ D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.pdb
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Cors.dll
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.dll
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.xml

@@ -39,11 +39,6 @@ namespace WebApi.Controllers
         [ResponseType(typeof(void))]
         public IHttpActionResult PutOrder(long id, Order order)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             if (id != order.OrderId)
             {
                 return BadRequest();
@@ -74,11 +69,6 @@ namespace WebApi.Controllers
         [ResponseType(typeof(Order))]
         public IHttpActionResult PostOrder(Order order)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
             db.Orders.Add(order);
             db.SaveChanges();
 
