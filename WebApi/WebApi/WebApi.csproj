@@ -252,6 +252,7 @@
     <Content Include="Models\DbModels.edmx.diagram">
       <DependentUpon>DbModels.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\Demo2.API.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />

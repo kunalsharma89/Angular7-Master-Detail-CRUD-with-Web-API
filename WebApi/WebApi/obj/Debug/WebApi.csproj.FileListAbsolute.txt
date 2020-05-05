@@ -54,7 +54,9 @@ D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Microsoft.Co
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Microsoft.Web.Infrastructure.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Newtonsoft.Json.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Net.Http.Formatting.dll
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Cors.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Helpers.dll
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.WebHost.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Mvc.dll
@@ -66,10 +68,11 @@ D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.W
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\WebGrease.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\EntityFramework.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\EntityFramework.SqlServer.xml
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Newtonsoft.Json.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Net.Http.Formatting.xml
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Helpers.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.xml
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Newtonsoft.Json.xml
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Helpers.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.WebHost.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Mvc.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Optimization.xml
@@ -79,11 +82,8 @@ D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.W
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.WebPages.Razor.xml
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Antlr3.Runtime.pdb
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.csproj.CoreCompileInputs.cache
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.csproj.CopyComplete
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.dll
 D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.pdb
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Cors.dll
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.dll
-D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\bin\System.Web.Http.Cors.xml
+D:\Demos\Angular7-Master-Detail-CRUD-with-Web-API\WebApi\WebApi\obj\Debug\WebApi.csprojAssemblyReference.cache

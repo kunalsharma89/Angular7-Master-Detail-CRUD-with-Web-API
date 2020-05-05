@@ -11,7 +11,8 @@ namespace WebApi.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,7 +26,10 @@ namespace WebApi.Models
         public Nullable<int> CustomerId { get; set; }
         public string PaymentMethod { get; set; }
         public Nullable<decimal> GarndTotal { get; set; }
-    
+
+        [NotMapped]
+        public string DeletedItemIds { get; set; }
+
         public virtual CustomerMaster CustomerMaster { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderItem> OrderItems { get; set; }

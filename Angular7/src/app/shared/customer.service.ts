@@ -10,6 +10,6 @@ export class CustomerService {
   constructor(private http:HttpClient) { }
 
   getCustomerList (){
-    return this.http.get(environment.apiURL +"CustomerMaster").toPromise();
+    return this.http.get(environment.apiURL +"/CustomerMaster").toPromise();
   }
 }

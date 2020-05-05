@@ -1,4 +1,5 @@
-<form #form="ngForm" autocomplete="off" *ngIf="service.formData">
+<form #form="ngForm" autocomplete="off" *ngIf="service.formData" (submit)="onSubmit(form)">
+    <input type="hidden" name="OrderId" #OrderId="ngModel" [(ngModel)]="service.formData.OrderId">
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
@@ -12,7 +13,7 @@
             </div>
             <div class="form-group">
                 <label>Customer</label>
-                <select #CustomerId="ngModel" [(ngModel)]="service.formData.CustomerId" class="form-control" name="CustomerId">
+                <select #CustomerId="ngModel" [(ngModel)]="service.formData.CustomerId" class="form-control" name="CustomerId" [class.is-invalid]="!isValid && service.formData.CustomerId == 0">
                     <option value="0">--Select Customer--</option>
                     <option *ngFor="let item of customerList" value="{{item.CustomerId}}">{{item.Name}}</option>
                 </select>
@@ -21,7 +22,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Payment Method</label>
-                <select #PaymentMethod="ngModel" [(ngModel)]="service.formData.PaymentMethod" class="form-control" name="PaymentMethod">
+                <select #PaymentMethod="ngModel" [(ngModel)]="service.formData.PaymentMethod" class="form-control" name="PaymentMethod" [class.is-invalid]="!isValid && service.formData.PaymentMethod == ''">
                     <option value="">--Select Payment Method--</option>
                     <option value="Cash">Cash</option>
                     <option value="Card">Card</option>
@@ -40,17 +41,17 @@
     </div>
     <!--Order Items-->
     <table class="table table-borderless">
-        <thead class="thead">
+        <thead class="thead-light">
             <th>Item</th>
             <th>Price</th>
             <th>Quantity</th>
             <th>Price</th>
             <th>
-                <a (click)="AddOrEditOrderItems(null,service.formData.OrderId)" class="btn btn-success btn-sm text-white"><i class="fa fa-plus"></i> Item</a>
+                <a (click)="AddOrEditOrderItems(null,service.formData.OrderId)" class="btn btn-sm btn-outline-success"><i class="fa fa-plus-square"></i> Item</a>
             </th>
         </thead>
         <tbody>
-            <tr *ngIf="service.orderItems.length==0">
+            <tr *ngIf="service.orderItems.length==0" [class.text-danger]="!isValid && service.orderItems.length == 0">
                 <td class="font-italic text-center" colspan="5">
                     No food item selected for this order.
                 </td>
@@ -68,6 +69,7 @@
         </tbody>
     </table>
     <div class="form-group">
-        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+        <button type="submit" class="btn btn-dark btn-sm"><i class="fa fa-database"></i> Submit</button>
+        <a routerLink="/orders" class="btn btn-sm btn-outline-dark ml-1"><i class="fa fa-table" aria-hidden="true"></i> View Orders</a>
     </div>
 </form>

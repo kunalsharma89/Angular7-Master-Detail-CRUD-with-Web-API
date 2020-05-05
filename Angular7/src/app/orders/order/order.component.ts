@@ -5,6 +5,8 @@ import { MatDialog, MatDialogConfig } from '@angular/material/dialog'
 import { OrderItemsComponent } from '../order-items/order-items.component';
 import { CustomerService } from 'src/app/shared/customer.service';
 import { Customer } from 'src/app/shared/customer.model';
+import { ToastrService } from 'ngx-toastr';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-order',
@@ -15,10 +17,26 @@ import { Customer } from 'src/app/shared/customer.model';
 export class OrderComponent implements OnInit {
 
   customerList:Customer[];
-  constructor(public service:OrderService, private dialog:MatDialog, private customerService: CustomerService) { }
+  isValid:boolean = true;
+  constructor(public service:OrderService,
+              private dialog:MatDialog, 
+              private customerService: CustomerService,
+              private toaster:ToastrService,
+              private router:Router,
+              private currentRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.resetForm();
+    let orderId = this.currentRoute.snapshot.paramMap.get("id");
+    if(orderId == null){
+      this.resetForm();
+    }
+    else{
+        this.service.GetOrder(parseInt(orderId)).then(res=>{
+         
+            this.service.formData = res.order;
+            this.service.orderItems = res.orderItems;
+        });
+    } 
     this.customerService.getCustomerList().then(res=> this.customerList = res as Customer[]);
   }
 
@@ -34,6 +52,9 @@ export class OrderComponent implements OnInit {
   }
 
   DeleteOrderItems(orderItemId:number, index:number){
+      if(orderItemId!=null){
+        this.service.formData.DeletedItemIds += orderItemId + ",";
+      }
       this.service.orderItems.splice(index,1);
       this.updateGrandTotal();
   }
@@ -54,9 +75,31 @@ export class OrderComponent implements OnInit {
       OrderId:null,
       CustomerId:0,
       PaymentMethod:"",
-      GarndTotal:0
+      GarndTotal:0,
+      DeletedItemIds:''
     }
     this.service.orderItems = [];
+  }
 
+  validateForm(){
+    this.isValid = true;
+    if(this.service.formData.CustomerId == 0){
+      this.isValid = false;
+    } else if(this.service.formData.PaymentMethod == ''){
+      this.isValid = false;
+    } else if(this.service.orderItems.length == 0){
+      this.isValid = false;
+    }
+    return this.isValid;
+  }
+
+  onSubmit(form:NgForm){
+    if(this.validateForm()){
+      this.service.SaveOrderData().subscribe(res=> {
+        this.resetForm();
+        this.toaster.success("Order saved successfully.","Restarunt App");
+        this.router.navigate(["/orders"]);
+      });
+    }
   }
 }
